@@ -1,6 +1,6 @@
 export const initialState = {
     basket: [],
-    // user: null,
+    user: null
 };
 
 // Selector to calculate the Basket's total amount
@@ -35,6 +35,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 basket: newBasket
+            }
+        case 'SET_USER':
+            return {
+                ...state, 
+                user: action.user
             }
     }
 }
