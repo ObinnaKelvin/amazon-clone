@@ -31,8 +31,8 @@ function Login() {
 
         //Successful Sign in
         //Trythis: 3 ---Itenery Operator
-        .then(auth => auth?history.push('/'):alert("Failed to Sign in")
-        )
+        .then(auth => auth?history.push('/'):alert("Failed to Sign in"))
+        .catch(error => alert(error.message))
     }
     const register = (e) => {
         e.preventDefault();
